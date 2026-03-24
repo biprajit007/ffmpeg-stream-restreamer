@@ -1,0 +1,10 @@
+services:
+  ffmpeg-tool:
+    build:
+      context: .
+    container_name: ffmpeg-stream-restreamer
+    command: python app.py --help
+    volumes:
+      - ./data:/data
+    environment:
+      PYTHONUNBUFFERED: "1"
